@@ -4,10 +4,10 @@ require 'rake/gempackagetask'
 PLUGIN = "whistler"
 NAME = "whistler"
 VERSION = "0.0.1"
-AUTHOR = "Your Name"
-EMAIL = "Your Email"
-HOMEPAGE = "http://merb-plugins.rubyforge.org/whistler/"
-SUMMARY = "Merb plugin that provides ..."
+AUTHOR = "Daniel Neighman"
+EMAIL = "has.sox@gmail.com"
+HOMEPAGE = "http://github.com/hassox/whistler"
+SUMMARY = "Whistler == White Lister"
 
 spec = Gem::Specification.new do |s|
   s.name = NAME
@@ -21,6 +21,7 @@ spec = Gem::Specification.new do |s|
   s.email = EMAIL
   s.homepage = HOMEPAGE
   s.add_dependency('merb', '>= 0.4.0')
+  s.add_dependency('hpricot')
   s.require_path = 'lib'
   s.autorequire = PLUGIN
   s.files = %w(LICENSE README Rakefile TODO) + Dir.glob("{lib,specs}/**/*")

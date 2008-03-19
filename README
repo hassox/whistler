@@ -1,4 +1,24 @@
-Whistler
+Whistler 
 ==============
 
-A plugin for the Merb framework that provides ...
+Whistler is a white listing markup filter based on the rails plugin by Rick Olson, aka technoweenie.
+http://techno-weenie.net/
+Whistler relies on the Hpricot library http://code.whytheluckystiff.net/hpricot
+ 
+Whistler strips, and or sanitizes arbitrary XML/HTML style markup of any tags not explicitly
+included in the white list.  It doesn't try to play catch-up with possible exploites such as black-listing systems do.
+
+Usage is very simple.
+
+=== Example
+# Applies the normal white list defaults
+
+Whistler.white_list( dodgy_markup ) 
+
+
+# Adds custom tags to allow
+Whistler.white_list(dodgy_markup, :add_tags => %w(news_tag my_tag other_tag))
+
+If Whistler is unable to read tags as "tags" it will instead sanitize potential XSS attempts in the text.
+Normal, non-malicious text should still appear correctly.
+

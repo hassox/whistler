@@ -1,9 +1,11 @@
 Whistler 
 ==============
 
-Whistler is a white listing markup filter based on the rails plugin by Rick Olson, aka technoweenie.
+Whistler is a white listing markup filter based on the specifications of the rails plugin by Rick Olson, aka technoweenie.
 http://techno-weenie.net/
 Whistler relies on the Hpricot library http://code.whytheluckystiff.net/hpricot
+
+This is very alpha at the moment.  Please help make it great.
  
 Whistler strips, and or sanitizes arbitrary XML/HTML style markup of any tags not explicitly
 included in the white list.  It doesn't try to play catch-up with possible exploites such as black-listing systems do.

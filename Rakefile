@@ -20,7 +20,6 @@ spec = Gem::Specification.new do |s|
   s.author = AUTHOR
   s.email = EMAIL
   s.homepage = HOMEPAGE
-  s.add_dependency('merb', '>= 0.4.0')
   s.add_dependency('hpricot')
   s.require_path = 'lib'
   s.autorequire = PLUGIN
